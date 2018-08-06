@@ -9,13 +9,18 @@ import java.io.IOException;
 
 @WebServlet(name = "CatalogServlet", urlPatterns = "/catalog")
 public class CatalogServlet extends HttpServlet {
+
+    protected void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("WEB-INF/catalog.jsp").forward(req, resp);
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+        processRequest(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+        processRequest(req, resp);
     }
 }

@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Корзина</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,13 +13,6 @@
         <a href="catalog" class="menu-item">Каталог</a>
         <a href="cart" class="menu-item">Корзина</a>
     </div>
-</div>
-<div class="content">
-    <h1>Корзина</h1>
-</div>
-<div class="footer">
-    <hr>
-    &copy;2018 Все права защищены.
 </div>
 </body>
 </html>

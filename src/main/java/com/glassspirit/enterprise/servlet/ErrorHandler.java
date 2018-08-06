@@ -13,10 +13,10 @@ public class ErrorHandler extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         switch (resp.getStatus()) {
             case 404:
-                req.getRequestDispatcher("/errors/error404.jsp").forward(req, resp);
+                req.getRequestDispatcher("/WEB-INF/errors/error404.jsp").forward(req, resp);
                 break;
             case 403:
-                req.getRequestDispatcher("/errors/error403.jsp").forward(req, resp);
+                req.getRequestDispatcher("/WEB-INF/errors/error403.jsp").forward(req, resp);
                 break;
         }
     }
