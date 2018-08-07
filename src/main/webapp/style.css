@@ -36,6 +36,7 @@ body {
 
 .menu-item:hover {
     background-color: #e8e8e8;
+    transition: background-color 0.5s;
 }
 
 .product-container {

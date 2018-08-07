@@ -10,6 +10,7 @@ public class Product {
     public Product() {
         id = "default";
         name = "default";
+        description = "";
         price = new Price();
     }
 

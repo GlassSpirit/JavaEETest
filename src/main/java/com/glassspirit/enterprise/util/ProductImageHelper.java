@@ -8,8 +8,9 @@ import java.io.File;
 public class ProductImageHelper {
 
     public static String getProductImagePath(Product product) {
-        if (new File(PageConstants.PRODUCT_IMAGES + product.getId() + PageConstants.PRODUCT_IMAGES_EXTENSION).exists())
-            return PageConstants.PRODUCT_IMAGES + product.getId() + PageConstants.PRODUCT_IMAGES_EXTENSION;
+        String filePath = PageConstants.PRODUCT_IMAGES + product.getId() + PageConstants.PRODUCT_IMAGES_EXTENSION;
+        if (new File(filePath).exists())
+            return filePath;
         else return getMissingImagePath();
     }
 
