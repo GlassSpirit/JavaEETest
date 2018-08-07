@@ -15,15 +15,15 @@ public class ProductDao {
 
     @PostConstruct
     private void init() {
-        merge(Product.builder().setId("test-1").setName("Test 1").build());
-        merge(Product.builder().setId("test-2").setName("Test 2").build());
-        merge(Product.builder().setId("test-3").setName("Test 3").build());
-        merge(Product.builder().setId("test-4").setName("Test 4").build());
-        merge(Product.builder().setId("test-5").setName("Test 5").build());
-        merge(Product.builder().setId("test-6").setName("Test 6").build());
-        merge(Product.builder().setId("test-7").setName("Test 7").build());
-        merge(Product.builder().setId("test-8").setName("Test 8").build());
-        merge(Product.builder().setId("test-9").setName("Test 9").build());
+        merge(new Product("test-1", "Test 1", "Супер классный товар 1"));
+        merge(new Product("test-2", "Test 2", "Товар первой категории"));
+        merge(new Product("test-3", "Test 3", "Banana banana banana"));
+        merge(new Product("test-4", "Test 4", "Пустое описание"));
+        merge(new Product("test-5", "Test 5"));
+        merge(new Product("test-6", "Test 6"));
+        merge(new Product("test-7", "Test 7"));
+        merge(new Product("test-8", "Test 8"));
+        merge(new Product("test-9", "Test 9"));
     }
 
     public Collection<Product> getProducts() {

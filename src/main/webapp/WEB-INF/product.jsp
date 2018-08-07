@@ -13,6 +13,9 @@
     <h1>Продукт <%=product.getName()%>
     </h1>
     <img src="<%=ProductImageHelper.getProductImagePath(product)%>">
+    <p>
+        <%=product.getDescription()%>
+    </p>
 </div>
 <jsp:include page="footer.jsp"/>
 </body>
