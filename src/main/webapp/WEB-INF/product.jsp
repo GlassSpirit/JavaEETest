@@ -1,3 +1,5 @@
+<%@ page import="com.glassspirit.enterprise.model.Product" %>
+<%@ page import="com.glassspirit.enterprise.util.ProductImageHelper" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +9,13 @@
 <body>
 <jsp:include page="header.jsp"/>
 <div class="content">
-    <h1>Продукт</h1>
+    <%Product product = (Product) request.getAttribute("product");%>
+    <h1>Продукт <%=product.getName()%>
+    </h1>
+    <img src="<%=ProductImageHelper.getProductImagePath(product)%>">
+    <p>
+        <%=product.getDescription()%>
+    </p>
 </div>
 <jsp:include page="footer.jsp"/>
 </body>
